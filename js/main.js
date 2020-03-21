@@ -11,6 +11,14 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+window.addEventListener("resize", () => {
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+});
+
 // add object to scene
 var geometry = new THREE.SphereGeometry(5, 20, 20);
 var material = new THREE.MeshBasicMaterial({
