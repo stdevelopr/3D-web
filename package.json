@@ -1,0 +1,23 @@
+{
+  "name": "3d-web",
+  "version": "1.0.0",
+  "description": "Three.js dynamic website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stdevelopr/3D-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stdevelopr/3D-web/issues"
+  },
+  "homepage": "https://github.com/stdevelopr/3D-web#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "three": "^0.114.0"
+  }
+}
