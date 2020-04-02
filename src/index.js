@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 // prepare dom to render
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
@@ -27,6 +29,18 @@ var material = new THREE.MeshBasicMaterial({
 });
 var sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
+
+//create a blue LineBasicMaterial
+var materialLine = new THREE.LineBasicMaterial({ color: 0x0000ff });
+
+var points = [];
+points.push(new THREE.Vector3(-10, 0, 0));
+points.push(new THREE.Vector3(0, 10, 0));
+points.push(new THREE.Vector3(10, 0, 0));
+
+var geometryLine = new THREE.BufferGeometry().setFromPoints(points);
+var line = new THREE.Line(geometryLine, materialLine);
+scene.add(line);
 
 // set camera position
 camera.position.z = 32;
